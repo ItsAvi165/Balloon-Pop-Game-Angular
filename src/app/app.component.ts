@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
   balloons: IBalloon[] = [];
   score = 0;
   missed = signal(0);
-  maxMisses = 3;
+  maxMisses = 5;
   gameOver = computed(() => {
     return this.missed() === this.maxMisses;
   });
