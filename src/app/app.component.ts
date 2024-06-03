@@ -19,11 +19,11 @@ import { Balloon } from './balloon.class';
   styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
-  balloonsOnScreen = 5;
+  balloonsOnScreen = 4;
   balloons: IBalloon[] = [];
   score = 0;
   missed = signal(0);
-  maxMisses = 10;
+  maxMisses = 3;
   gameOver = computed(() => {
     return this.missed() === this.maxMisses;
   });
